@@ -1,0 +1,47 @@
+.business {
+  @include section;
+}
+
+.business__container {
+  @include container;
+}
+
+.business {
+  padding-top: 0;
+}
+
+.business__list {
+  display: flex;
+  gap: 30px;
+}
+
+.business__item {
+  position: relative;
+}
+
+.business__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+// Mobile and tablet
+
+.business {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}

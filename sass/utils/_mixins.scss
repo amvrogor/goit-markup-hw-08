@@ -1,0 +1,40 @@
+@mixin section($padding: 60px) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+@mixin container($ml: auto, $mr: auto, $w: 480px, $pl: 15px, $pr: 15px) {
+  margin-left: $ml;
+  margin-right: $mr;
+  max-width: $w;
+  padding-left: $pl;
+  padding-right: $pr;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+
+// Original
+
+// @mixin section($padding: 94px) {
+//   padding-top: $padding;
+//   padding-bottom: $padding;
+// }
+
+// @mixin container($ml: auto, $mr: auto, $w: 1200px, $pl: 15px, $pr: 15px) {
+//   margin-left: $ml;
+//   margin-right: $mr;
+//   width: $w;
+//   padding-left: $pl;
+//   padding-right: $pr;
+// }

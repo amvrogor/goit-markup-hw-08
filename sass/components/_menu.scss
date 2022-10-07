@@ -1,0 +1,127 @@
+.menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: fill var(--transit);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 48px 40px;
+  background-color: var(--primary-background-color);
+  transform: translateX(100%);
+  transition: transform 400ms;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+.mobile-nav__list {
+  margin-bottom: auto;
+}
+
+.mobile-nav__item {
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+}
+
+.mobile-nav__link {
+  color: var(--title-text-color);
+  transition: color var(--transit);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &--current {
+    color: var(--accent-color);
+  }
+}
+
+.mobile-contacts__item {
+  margin-top: 32px;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+
+  &:last-child {
+    font-size: 24px;
+    color: var(--primary-text-color);
+  }
+}
+
+.mobile-contacts__link {
+  color: inherit;
+  transition: color var(--transit);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.mobile-socials__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+}
+
+.mobile-socials__item {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+
+  &:first-of-type {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+.mobile-socials__link {
+  color: var(--accent-color);
+  display: block;
+  transition: color var(--transit);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}

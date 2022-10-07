@@ -1,0 +1,26 @@
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: var(--transit);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    fill: #ffffff;
+  }
+}
+
+.social__link--light {
+  fill: #afb1b8;
+  transition-property: background-color, fill;
+}
+
+.social__link--dark {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: #ffffff;
+  transition-property: background-color;
+}
